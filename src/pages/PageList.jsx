@@ -6,11 +6,12 @@ import { useSelector } from 'react-redux';
 const PageList = ({apiPath}) => {
 
    const {data} = useFetch(apiPath);
-   const count = useSelector((state)=>state.users.value)
+ 
    
 
   return (
-    <div>
+    <div> 
+             
             <div style={{display: "flex",flexWrap: "wrap",gap: '10px',justifyContent: "space-evenly"}}>
              {
                 data.map((product,i)=>(
