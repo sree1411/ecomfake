@@ -21,7 +21,7 @@ export const counterSlice = createSlice({
         const productId = action.payload;
         let exitProduct = state.cartList.find((product)=>product.id == productId)
         if(exitProduct){
-            state.total = state.total - exitProduct.price * exitProduct.quantity
+            state.total -= exitProduct.price * exitProduct.quantity
             state.cartList =  state.cartList.filter((product)=>product.id !== productId)
         }
       },
