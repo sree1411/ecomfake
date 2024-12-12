@@ -1,12 +1,22 @@
 import React from 'react'
+import useFetch from '../hooks/useFetch'
+import Card from '../components/Card'
 
-const PageList = () => {
+const PageList = ({apiPath}) => {
 
+   const {data} = useFetch(apiPath);
 
-
-    
   return (
-    <hero>PageList</hero>
+    <div>
+            <div style={{display: "flex",flexWrap: "wrap",gap: '10px',justifyContent: "space-evenly"}}>
+            {
+                data.map((product,i)=>(
+                    <Card key={i} product={product}  />
+                ))
+            }
+        </div>
+      
+    </div>
   )
 }
 

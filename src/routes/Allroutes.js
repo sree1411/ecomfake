@@ -8,7 +8,7 @@ const Allroutes = () => {
   return (
     <main>
         <Routes>
-            <Route path='/' element={<PageList/>} />
+            <Route path='/' element={<PageList apiPath="products"/>} />
             <Route path='/products/:id' element={<PageDetail/>} />
             <Route path='*' element={<PageNotFound/>} />
         </Routes>
