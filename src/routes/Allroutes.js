@@ -9,8 +9,8 @@ const Allroutes = () => {
     <main>
         <Routes>
             <Route path='/' element={<PageList/>} />
-            <Route path='/' element={<PageDetail/>} />
-            <Route path='/' element={<PageNotFound/>} />
+            <Route path='/products/:id' element={<PageDetail/>} />
+            <Route path='*' element={<PageNotFound/>} />
         </Routes>
     </main>
   )

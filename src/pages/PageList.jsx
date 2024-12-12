@@ -1,8 +1,12 @@
 import React from 'react'
 
 const PageList = () => {
+
+
+
+    
   return (
-    <div>PageList</div>
+    <hero>PageList</hero>
   )
 }
 
