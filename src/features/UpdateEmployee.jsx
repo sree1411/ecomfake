@@ -7,7 +7,7 @@ const UpdateEmployee = () => {
     const {id } = useParams();
     const { isLoading, data } = useGetEmployeeQuery()
 
-    const currentEmployee = data?.find((emp)=>emp._id === id)
+    const currentEmployee = data.find((emp)=>emp._id === id)
     console.log(currentEmployee)
      var [addempFn] = useUpdateEmpMutation()
      const navigate = useNavigate()
