@@ -15,8 +15,21 @@ export const employeeApi = createApi({
         method: 'POST',
         body: emp,
       }),
-    })
+    }),
+    deleteEmp: builder.mutation({
+      query: (id) => ({
+        url: `/${id}`,
+        method: 'DELETE',
+      }),
+    }),
+    updateEmp: builder.mutation({
+      query: ({id,emp}) => ({
+        url: `/${id}`,
+        method: 'PUT',
+        body: emp
+      }),
+    }),
   }),
 });
 
-export const { useGetEmployeeQuery, useAddEmployeMutation} = employeeApi;
+export const { useGetEmployeeQuery, useAddEmployeMutation, useDeleteEmpMutation, useUpdateEmpMutation} = employeeApi;
