@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import EmployeeHome from "./features/EmployeeHome";
+import AddEmployee from "./features/AddEmployee";
+import UpdateEmployee from "./features/UpdateEmployee";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +17,16 @@ const router = createBrowserRouter([
        {
         path:"/",
         element: <EmployeeHome/>
+       },
+       {
+        path:"/addemployee",
+        element: <AddEmployee/>
+       },
+       {
+          path:"/updateemployee",
+          element: <UpdateEmployee/>
        }
+      
     ]
   },
 ]);

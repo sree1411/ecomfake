@@ -9,7 +9,14 @@ export const employeeApi = createApi({
     getEmployee: builder.query({
       query: () => `/`,
     }),
+    addEmploye: builder.mutation({
+      query: (emp) => ({
+        url: ``,
+        method: 'POST',
+        body: emp,
+      }),
+    })
   }),
 });
 
-export const { useGetEmployeeQuery} = employeeApi;
+export const { useGetEmployeeQuery, useAddEmployeMutation} = employeeApi;
